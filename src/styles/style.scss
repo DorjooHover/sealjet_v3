@@ -1,0 +1,47 @@
+@import "~tailwindcss/base";
+@import "~tailwindcss/components";
+@import "~tailwindcss/utilities";
+
+.nav {
+     background-color: #395c4d;
+}
+.header,
+.order {
+     height: calc(100vh - 66.3px);
+}
+.product {
+     background-color: #e2e2e2;
+}
+.menu_icon_bg {
+     background-color: #395c4d;
+}
+
+.contact {
+     background-color: #395c4d;
+}
+
+.menu_color {
+     color: #395c4d;
+}
+.carousel {
+     display: inline-flex;
+     overflow-x: hidden;
+     /*  scroll snap is a great feature which will center the image on snap on touch screen devices  */
+     scroll-snap-type: x mandatory;
+     /* all below will hide the scrollbar on all browsers.    */
+     -webkit-overflow-scrolling: touch;
+     scrollbar-width: none; /* For Firefox */
+     -ms-overflow-style: none; /* For Internet Explorer and Edge */
+     &::-webkit-scrollbar {
+          width: 0px;
+     }
+}
+.products {
+     background-color: #f4f4f4;
+}
+.products_border {
+     border-bottom: 1px #e4e4e4 solid;
+}
+// .swiper-button-next {
+//      right: ;
+// }
