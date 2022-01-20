@@ -12,7 +12,12 @@ const Index = () => {
      useEffect(() => {
           const fetchPosts = async () => {
                setLoading(true)
-               const res = await axios.get('https://jsonplaceholder.typicode.com/posts')
+               const res = await axios.get('https://sealjet-web-api.herokuapp.com/logos', {
+                    headers:{  
+                         "Content-Type": "application/json",
+                         'Accept': 'application/json',
+                       },
+               })
                setPosts(res.data)
                setLoading(false)
           }
@@ -26,7 +31,7 @@ const Index = () => {
           <div className="px-28 py-10 products bg-slate-300">
                <div className="mx-20 my-10 bg-white flex p-20 justify-center align-center">
                     <div className="mrw-1/2 h-full m-auto">
-                    <img src="./img/info/mid-1.jfif" alt="" className='w-full' />
+                         <img src="./img/info/mid-1.jfif" alt="" className='w-full' />
                     </div>
                     <div className='w-1/2 ml-24'>
                          <h1 className="font-bold text-xl mb-2">Бүтээгдэхүүн нэр</h1>
@@ -53,12 +58,12 @@ const Index = () => {
                </div>
                <h2 className="text-xl font-bold mb-10">Сальник ангилал</h2>
                <div className="grid grid-cols-5 gap-4 ">
-               <Posts posts={currentPosts} loading={loading} />
+                    <Posts posts={currentPosts} loading={loading} />
                </div>
 
                <h2 className="text-xl font-bold my-10">Мотор ангилал</h2>
                <div className="grid grid-cols-5 gap-4 ">
-                    <Posts posts={currentPosts} loading={loading}/>
+                    <Posts posts={currentPosts} loading={loading} />
 
                </div>
                <div className="py-16">
